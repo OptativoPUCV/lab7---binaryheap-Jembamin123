@@ -21,7 +21,9 @@ void* heap_top(Heap* pq){
   if(pq==NULL||pq->size==0){
     return NULL;    
   }
-  return pq->heapArray[0].data;
+  else{
+    return pq->heapArray[0].data;
+  }
 }
 
 int parent(int i){
