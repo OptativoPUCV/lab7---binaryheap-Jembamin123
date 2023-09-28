@@ -151,3 +151,14 @@ Thu 28 Sep 2023 07:31:56 PM UTC:
  tests:  4|3
 total_score: 25/70
 98c0546
+Thu 28 Sep 2023 07:32:17 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:24: error: comparison between pointer and integer [-Werror]
+   21 |   if(pq==NULL||pq->size==NULL){
+      |                        ^~
+cc1: all warnings being treated as errors
+Compilation failed
+201308e
