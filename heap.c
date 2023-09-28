@@ -46,7 +46,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
     while(i != 0 && pq->heapArray[parent(i)].priority < pq->heapArray[i].priority){
       swap(&(pq->heapArray[i]), &(pq->heapArray[parent(i)]));
-      j=parent(i);
+      i=parent(i);
     }
 }
 
