@@ -198,3 +198,17 @@ Thu 28 Sep 2023 07:43:40 PM UTC:
  tests:  7|1
 total_score: 45/70
 e160217
+Thu 28 Sep 2023 07:48:18 PM UTC: 
+ heap.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:63:20: error: initialization of ‘int’ from ‘Heap *’ {aka ‘struct Heap *’} makes integer from pointer without a cast [-Werror=int-conversion]
+   63 |     int left_child=createHeap(i);
+      |                    ^~~~~~~~~~
+heap.c:64:21: error: initialization of ‘int’ from ‘Heap *’ {aka ‘struct Heap *’} makes integer from pointer without a cast [-Werror=int-conversion]
+   64 |     int right_child=createHeap(i);
+      |                     ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ff2913e
