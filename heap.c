@@ -76,8 +76,8 @@ void heap_pop(Heap* pq){
     }
     swap(&(pq->heapArray[i]),&(pq->heapArray[largo]));
     i=largo;
+    break;
   }
-  break;
 }
 
 Heap* createHeap(){

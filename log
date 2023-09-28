@@ -239,3 +239,9 @@ heap.c:80:3: error: break statement not within loop or switch
       |   ^~~~~
 Compilation failed
 a8803d6
+Thu 28 Sep 2023 07:59:56 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|0
+total_score: 70/70
+e198685
