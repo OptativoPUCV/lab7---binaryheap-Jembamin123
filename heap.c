@@ -32,22 +32,22 @@ void swap(heapElem* x, heapElem* y){
 }
 
 void heap_push(Heap* pq, void* data, int priority){
-    heapElem newElem;
-    newElem.data = data;
-    newElem.priority = priority;
+  heapElem newElem;
+  newElem.data = data;
+  newElem.priority = priority;
 
-    if(pq->size == pq->capac){
-      pq->capac *= 2;
-      pq->heapArray = realloc(pq->heapArray, pq->capac * sizeof(heapElem));
-    }
-    int i = pq->size;
-    pq->heapArray[i]=newElem;
-    pq->size++;
+  if(pq->size != pq->capac){
+    pq->capac *= 2;
+    pq->heapArray = realloc(pq->heapArray, pq->capac*sizeof(heapElem));
+  }
+  int i=pq->size;
+  pq->heapArray[i]=newElem;
+  pq->size++;
 
-    while(i != 0 && pq->heapArray[parent(i)].priority < pq->heapArray[i].priority){
-      swap(&(pq->heapArray[i]), &(pq->heapArray[parent(i)]));
-      i=parent(i);
-    }
+  while(i!=0&&pq->heapArray[parent(i)].priority < pq->heapArray[i].priority){
+    swap(&(pq->heapArray[i]), &(pq->heapArray[parent(i)]));
+    i=parent(i);
+  }
 }
 
 
