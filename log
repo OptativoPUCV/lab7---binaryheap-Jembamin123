@@ -2,3 +2,14 @@ Thu 28 Sep 2023 06:59:23 PM UTC:
  tests:  0|4
 total_score: 0/70
 1bbdc1b
+Thu 28 Sep 2023 07:11:34 PM UTC: 
+ heap.c | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:49:7: error: ‘j’ undeclared (first use in this function)
+   49 |       j=parent(i);
+      |       ^
+heap.c:49:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6eb3208
