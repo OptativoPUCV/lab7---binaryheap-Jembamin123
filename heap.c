@@ -60,15 +60,15 @@ void heap_pop(Heap* pq){
 
   int i=0;
   while(1){
-    int left_child=(i);
-    int right_child=(i);
+    int izquierda=heap(i);
+    int derecha=heap(i);
     int largo=i;
 
-    if(left_child < pq->size && pq->heapArray[left_child].priority > pq->heapArray[largo].priority){
-      largo = left_child;
+    if((izquierda < pq->size)&&(pq->heapArray[izquierda].priority > pq->heapArray[largo].priority)){
+      largo= izquierda;
     }
-    if((right_child < pq->size)&&(pq->heapArray[right_child].priority > pq->heapArray[largo].priority)){
-      largo = right_child;
+    if((derecha < pq->size)&&(pq->heapArray[derecha].priority > pq->heapArray[largo].priority)){
+      largo =derecha;
     }
     if(largo==i){
       break;
