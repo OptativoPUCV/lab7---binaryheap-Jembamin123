@@ -59,7 +59,7 @@ Heap* createHeap(){
   Heap* NewHeap= (Heap*)malloc(sizeof(Heap));
 
   NewHeap->size=0;
-  NewHeap->capac=2;
+  NewHeap->capac=3;
   NewHeap->heapArray=(heapElem*)malloc(NewHeap->capac*sizeof(heapElem));
   
   return NULL;
