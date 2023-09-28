@@ -49,3 +49,17 @@ Thu 28 Sep 2023 07:20:09 PM UTC:
  tests:  3|4
 total_score: 15/70
 f76aca8
+Thu 28 Sep 2023 07:20:32 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:40:18: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘pq’
+   40 |     pq->capac =pq->pq->capac 2+1;
+      |                  ^~
+heap.c:40:29: error: expected ‘;’ before numeric constant
+   40 |     pq->capac =pq->pq->capac 2+1;
+      |                             ^~
+      |                             ;
+Compilation failed
+07d8a2e
